@@ -16,7 +16,9 @@ RUN apt-get install -y libmysqlclient-dev && pip install mysqlclient==1.3.7
 RUN apt-get build-dep -y psycopg2 && pip install psycopg2==2.6.1
 
 # Impala (ref: https://github.com/airbnb/caravel/issues/339)
-RUN pip install impyla==0.13.7
+RUN pip install six 
+RUn pip install bit_array
+RUN pip install impyla==0.13.7 
 
 # Caravel
 RUN pip install caravel==0.8.9
